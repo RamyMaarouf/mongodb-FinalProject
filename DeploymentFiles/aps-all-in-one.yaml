@@ -59,7 +59,7 @@ spec:
       name: mongo-persistent-storage
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: standard 
+      storageClassName: ""
       resources:
         requests:
           storage: 5Gi 
@@ -160,7 +160,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: store-front
-          image: maar0006/store-front-FinalProject:latest 
+          image: maar0006/store-front-finalproject:latest 
           imagePullPolicy: Always # <-- Forces pull of new image
           ports:
             - containerPort: 80
@@ -202,7 +202,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: store-admin
-          image: maar0006/store-admin-FinalProject:latest 
+          image: maar0006/store-admin-finalproject:latest 
           imagePullPolicy: Always # <-- Forces pull of new image
           ports:
             - containerPort: 80
@@ -244,7 +244,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: order-service
-          image: maar0006/order-service-FinalProject:latest 
+          image: maar0006/order-service-finalproject:latest 
           imagePullPolicy: Always # <-- Forces pull of new image
           ports:
             - containerPort: 3000
@@ -287,7 +287,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: product-service
-          image: maar0006/product-service-FinalProject:latest 
+          image: maar0006/product-service-finalproject:latest 
           imagePullPolicy: Always # <-- Forces pull of new image
           ports:
             - containerPort: 3002
@@ -330,7 +330,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: makeline-service
-          image: maar0006/makeline-service-FinalProject:latest 
+          image: maar0006/makeline-service-finalproject:latest 
           imagePullPolicy: Always # <-- Forces pull of new image
           ports:
             - containerPort: 3001
